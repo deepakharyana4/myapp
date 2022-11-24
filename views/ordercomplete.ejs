@@ -1,0 +1,18 @@
+<%- include("header")-%>
+  <h1><%= title%></h1>
+  <h3>Thanks for Order</h3>
+  <div class="text-center">
+
+  <ul type="none" id="orderedfood">
+    <% for(let i=0;i<order.length;i++){ %>
+      <li class="my-3">
+          <%= order[i]%>
+      </li>
+      <% } %>
+  </ul>
+  <button class="btn btn-primary w-75 my-3"><a class="nav-link" href="/">Order Again</a></button>
+  <button class="btn btn-primary w-75 my-3"><a class="nav-link" href="/ordercomplete">Cancel Order</a></button>
+  <button class="btn btn-primary w-75 my-3"><a class="nav-link" href="/ordercomplete">Edit Order</a></button>
+  </div>
+  
+<%- include("footer") -%>

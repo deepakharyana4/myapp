@@ -1,0 +1,46 @@
+<%- include("header")-%>
+
+<form method="post" action="/">
+ <h1>Welcome To The Jatin Khan's Cafe</h1>
+<div class="row">
+
+    <div class="col-12 col-lg-4">
+        <h3>Food</h3>
+        <ul type="none" class="">
+            <% for(let i=0;i<foods.length;i++){ %>
+                <li class="my-3"><input type="checkbox" class="me-3" onchange="orderedItems(this.value)" name="foodscheckbox" value=" <%= foods[i].name%>">
+                    <%= foods[i].name%>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+
+    <div class="col-12 col-lg-4 ">
+        <h3>Drinks</h3>
+        <ul type="none" id='drink' class="">
+            <% for(let i=0;i<drinks.length;i++){ %>
+                <li class="my-3"><input type="checkbox" class="me-3">
+                    <%= drinks[i]%>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+
+    <div class="col-12 col-lg-4">
+        <h3>Snacks</h3>
+        <ul type='none' id="snack" class="">
+            <% for(let i=0;i<snacks.length;i++){ %>
+                <li class="my-3"><input type="checkbox" class="me-3">
+                    <%= snacks[i]%>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+
+</div>
+ <div class="text-center">
+ <button class="btn btn-primary w-75" type="submit">Order</button>
+ </div>
+ </form>
+ <%- include("footer") -%>
+ 

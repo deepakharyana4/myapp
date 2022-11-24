@@ -1,0 +1,32 @@
+<%- include("header") %>
+<form method="post" action="/chief">
+ <h1>Welcome To The Nature's Cafe</h1>
+ <div class=row>
+
+ <div class="col">
+ <h3>Food<span><a  onclick="chieflist('food')" ondblclick="hide('food')" href="#"><ion-icon name="create-outline"></ion-icon></a></span></h3>
+ <ul type="none" class="" >
+    <input type="text" id="food" style="display:none;margin-left: 20%;" name="food">
+ </ul>
+ </div>
+
+ <div class="col">
+ <h3>Drinks<span><a  onclick="chieflist('drink')" ondblclick="hide('drink')" href="#"><ion-icon name="create-outline"></ion-icon></a></h3>
+ <ul  type="none" class="">
+    <input type="text" id="drink" style="display:none;margin-left: 20%;" name="drink">
+ </ul>
+ </div>
+
+ <div class="col">
+ <h3>Snacks<span><a   onclick="chieflist('snack')" href="#"><ion-icon name="create-outline"></ion-icon></a></h3>
+ <ul type='none' class="">
+    <input type="text" id="snack" style="display:none;margin-left: 20%;" name="snack">
+ </ul>
+ </div>
+
+ </div>
+ <div class="text-center">
+ <button class="btn btn-primary w-75" type="submit">Add</button>
+ </div>
+ </form>
+ <%- include("footer") %>
